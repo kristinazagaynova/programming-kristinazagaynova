@@ -180,8 +180,8 @@ def generate_sudoku(N: int) -> tp.List[tp.List[str]]:
     grid = solve([["."] * 9 for _ in range(9)])  # type: ignore
     N = 81 - min(81, N)
     while N:
-        row = randint(0, 8)
-        column = randint(0, 8)
+        row = random.randint(0, 8)
+        column = random.randint(0, 8)
         if grid is not None:
             if grid[row][column] != ".":
                 grid[row][column] = "."
